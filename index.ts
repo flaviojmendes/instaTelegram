@@ -5,7 +5,7 @@ import {InstagramService} from "./services/instagram.service";
 require('dotenv').config()
 
 // Instantiate a new Bot
-const bot = new Telegraf('1719610316:AAETkT7a-n355Em3JhgTDeEDaszSVTMUgD4')
+const bot = new Telegraf(process.env.TELEGRAM_API_KEY || '')
 
 // Listen the /start command
 bot.command('start',(ctx) => { ctx.reply('Hello, I\'m your Instagram client!') })
